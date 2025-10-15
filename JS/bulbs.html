@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Click Swap</title>
+</head>
+<body>
+
+    <!-- Initial Image -->
+    <img id="myImage" width="30%" height="30% " src="D:/Hari25/hariweb/js/Light-bulb-1off.jpg" alt="Click to change image" onclick="changeImage()" />
+
+    <!-- JavaScript to change the image -->
+    <script>
+        function changeImage() {
+            var img = document.getElementById("myImage");
+            if (img.src.includes("D:/Hari25/hariweb/js/Light-bulb-1off.jpg")) {
+                img.src = "D:/Hari25/hariweb/js/bulbonHaPnm6P7TZhPQGGUxtDjAg-600-80.jpg";
+            } else {
+                img.src = "D:/Hari25/hariweb/js/Light-bulb-1off.jpg";
+            }
+        }
+    </script>
+
+</body>
+</html>

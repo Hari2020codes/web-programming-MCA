@@ -1,0 +1,30 @@
+<head>
+    <title>Hide and Show Image</title>
+</head>
+        <body><center>
+       
+        <img id="Image"  alt="GTR R-32" width="60%" height="80%" src="white.jpeg"/>
+         <div style="position:relative;">
+        <button id="hidenshow" onclick="hideorshow()">Show</button>
+        </div>
+        
+        <script>
+            function hideorshow() {
+                var img = document.getElementById("Image");
+                var btn = document.getElementById("hidenshow");
+
+                if (img.src.includes("white.jpeg")) {
+                    img.src = "gtr32.jpg"; 
+                    btn.textContent="Hide";
+                } else {
+                    img.src = "white.jpeg";
+                    btn.textContent="Show"; 
+                }
+            }
+        </script>
+       
+
+        </center>
+    </body>
+</html>
+

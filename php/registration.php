@@ -9,14 +9,16 @@
     <form method="POST" action="#">
         enter id<input type="text" name="eid"><br>
         enter name<input type="text" name="ename"><br>
+        enter department<input type="text" name="dept"><br>
         enter salary<input type="text" name="salary"><br>
+        
        Submit <input type="submit" name="submit">
       </form>
 <?php
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="web";
+$dbname="webdb";
 $conn=mysqli_connect($servername,$username,$password,$dbname);
 if(!$conn)
 {
@@ -27,10 +29,11 @@ else{
 }
 
 $id=$_POST['eid'];
+$dept=$_POST['dept'];
 $salary=$_POST['salary'];
 $name=$_POST['ename'];
 
-$query="INSERT INTO test VALUES('$id','$name','$salary')";
+$query="INSERT INTO emp VALUES('$id','$name','$dept','$salary')";
 $res=mysqli_query($conn, $query);
 if($res)
 {
@@ -43,4 +46,5 @@ else{
 
 
 </body>
+
 </html>
